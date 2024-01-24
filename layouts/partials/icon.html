@@ -1,4 +1,4 @@
-{{- $path := printf "/icons/%s/%s.svg" site.Params.Icons.Set .icon}}
+{{- $path := printf "/assets/icons/%s/%s.svg" site.Params.Icons.Set .icon}}
 <div class="icon">
     {{ readFile $path | safeHTML }}
 </div>

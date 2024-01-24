@@ -1,1 +1,24 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+{{ $footer := site.Params.Footer}}
+<div class="grid-x">
+    <social class="cell medium-4 large-4">
+        {{ with $footer.Social }}
+            {{ range . }}
+                <socialmedia>
+                    <a href="{{ .url }}">{{ partial "icon.html" (dict "icon" .icon) }}</a>
+                </socialmedia>
+            {{ end }}
+        {{ end }}
+    </social>
+    <copyright class="cell medium-4 large-4">
+        {{ with $footer.Copyright }}
+            Copyright © {{ .Year }} <a href="{{ .Url }}">{{ .Owner}}</a>
+        {{ end }}
+    </copyright>
+    <contact class="cell medium-4 large-4">
+        {{ with $footer.Contact }}
+            {{ range . }}
+                <a href="{{ .url }}">{{ .text }}</a>
+            {{ end }}
+        {{ end }}
+    </contact>
+</div>
