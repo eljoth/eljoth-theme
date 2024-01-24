@@ -70,7 +70,9 @@ params:
 module:
     mounts:
         - source: ./node_modules/foundation-sites/dist/css
-          target: static/css/foundation
+          target: ./static/foundation
+        - source: static
+          target: static
     hugoVersion:
         extended: false
         min: 0.116.0
