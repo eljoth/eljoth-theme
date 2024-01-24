@@ -1,7 +1,18 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+
+  {{ with site.Params.Home.Orbit }}
+    {{ partial "orbit.html" . }}
   {{ end }}
+  {{ with site.Params.Home.Spotlight }}
+    <div class="grid-container fluid">
+      <div class="grid-x grid-padding-y grid-margin-x list">
+        {{ range .elements }}
+          <div class="cell shrink">
+            {{ partial "spotlight.html" .}}
+          </div>
+        {{ end}}
+      </div>
+    </div>
+  {{ end }}
+  {{ .Content }}
 {{ end }}
