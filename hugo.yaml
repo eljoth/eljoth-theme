@@ -1,17 +1,72 @@
 baseURL: https://example.org/
 languageCode: en-us
 title: My New Hugo Site
+markup:
+  highlight:
+    style: nord
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: true
+    noHl: true
+    tabWidth: 4
 menus:
-    main:
-        - name: Home
-          pageRef: /
-          weight: 10
-        - name: Posts
-          pageRef: /posts
-          weight: 20
-        - name: Tags
-          pageRef: /tags
-          weight: 30
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
+      pre: home-2
+    - name: Posts
+      pageRef: /posts
+      weight: 20
+      pre: news-paper
+    - name: Tags
+      pageRef: /tags
+      weight: 30
+      pre: tag
+params:
+  search:
+    enabled: false
+  icons:
+    set: streamline/flex/line
+  home:
+    orbit:
+      controls:
+        enabled: false
+      elements:
+        - image: waterfalls.png
+          caption: Waterfalls located in spain.
+        - image: surfer.png
+        - image: flowers.png
+        - image: sky.png
+    spotlight:
+      size: 120px
+      elements:
+        - url: "/"
+          description: Hugo Theme for reuse in website development
+          image: eljoth.png
+  footer:
+    copyright:
+      year: 2023-2024
+      owner: eljoth.io
+      url: https://eljoth.io
+    social:
+      - url: "https://www.facebook.com"
+        icon: facebook-1
+      - url: "https://www.tiktok.com"
+        icon: tiktok
+      - url: "https://www.instagram.com"
+        icon: button-record-1
+    contact:
+      - url: "/imprint"
+        text: Imprint
+      - url: "/data-protection"
+        text: Data Protection
+      - url: "/faq"
+        text: FAQ
 module:
     mounts:
         - source: ./node_modules/foundation-sites/dist/css
