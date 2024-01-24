@@ -37,13 +37,13 @@ params:
   home:
     orbit:
       controls:
-        enabled: true
+        enabled: false
       elements:
         - image: waterfalls.png
           caption: Waterfalls located in spain.
-        - image: surfer.png
-        - image: flowers.png
-        - image: sky.png
+        #- image: surfer.png
+        #- image: flowers.png
+        #- image: sky.png
     spotlight:
       size: 120px
       elements:
@@ -73,12 +73,24 @@ module:
   mounts:
     - source: ./node_modules/foundation-sites/dist/css/
       target: ./static/foundation/
+      includeFiles:
+        - foundation.css
+        - foundation.min.css
     - source: ./node_modules/foundation-sites/dist/js/
       target: ./static/foundation/
+      includeFiles:
+        - foundation.js
+        - foundation.min.js
     - source: ./node_modules/jquery/dist/
       target: ./static/jquery/
+      includeFiles:
+        - jquery.js
+        - jquery.min.js
     - source: ./node_modules/what-input/dist/
       target: ./static/what-input/
+      includeFiles:
+        - what-input.js
+        - what-input.min.js
     - source: ./node_modules/@fontsource/fira-sans/
       target: ./static/fira-sans/
     - source: static
