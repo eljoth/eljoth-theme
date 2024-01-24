@@ -1,0 +1,23 @@
+<a href="{{ .RelPermalink}}">
+    <div class="card post">
+        {{ with .Resources.GetMatch "cover.*" }}
+            {{ with .Fill "300x200 webp" }}
+                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ end }}
+        {{ end }}
+
+        <div class="card-section gr">
+            <h4>{{ .LinkTitle }}</h4>
+            <div class="summary">
+                {{ printf "%.180s" .Summary }}
+            </div>
+            <div>
+                {{ with .GetTerms "tags" }}
+                    {{ range . }}
+                        {{ partial "tag.html" . }}
+                    {{ end}}
+                {{ end}}
+            </div>
+        </div>
+    </div>
+</a>

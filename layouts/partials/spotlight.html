@@ -1,0 +1,32 @@
+{{ $config := site.Params.Home.Spotlight }}
+{{ if .image }}
+    <div class="card spotlight" style="width: {{ $config.size }}; height: {{ $config.size }}">
+        {{ if .description}}
+            {{- partial "partials/inline/spotlight/tooltip.html" . }}
+        {{ else if .url }}
+            {{- partial "partials/inline/spotlight/link.html" . }}
+        {{ else }}
+            {{- partial "partials/inline/spotlight/image.html" . }}
+        {{ end }}
+    </div>
+{{ end }}
+
+{{ define "partials/inline/spotlight/tooltip.html" }}
+    <span data-tooltip tabindex="1" title="{{ .description }}">
+        {{ if .url }}
+            {{- partial "partials/inline/spotlight/link.html" . }}
+        {{ else }}
+            {{- partial "partials/inline/spotlight/image.html" . }}
+        {{ end }}
+    </span>
+{{ end }}
+
+{{ define "partials/inline/spotlight/link.html"}}
+    <a href="{{ .url }}">
+        {{- partial "partials/inline/spotlight/image.html" . }}
+    </a>
+{{ end }}
+
+{{ define "partials/inline/spotlight/image.html" }}
+    <img src="{{ printf "/spotlights/%s" .image}}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+{{ end}}
