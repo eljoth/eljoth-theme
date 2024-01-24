@@ -1,9 +1,8 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{ $a := resources.Get "css/foundation.css" }}
+{{ $b := resources.Get "css/custom.css" }}
+{{ $c := resources.Get "css/colors.css" }}
+{{ $d := resources.Match "css/fira-sans/**.css" }}
+
+{{ $css := slice $a $b $c| resources.Concat "css/main.css" | minify | fingerprint }}
+
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></link>

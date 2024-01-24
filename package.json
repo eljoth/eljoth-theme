@@ -7,11 +7,12 @@
       "foundation-sites": "project"
     }
   },
-  "dependencies": {},
   "description": "## Features",
   "devDependencies": {
     "@fontsource/fira-sans": "^5.0.18",
-    "foundation-sites": "^6.8.1"
+    "foundation-sites": "^6.8.1",
+    "jquery": "^3.7.0",
+    "what-input": "^5.2.12"
   },
   "license": "MIT",
   "main": "index.js",

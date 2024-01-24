@@ -30,6 +30,7 @@ menus:
 params:
   plausible:
     domain: ""
+    gitstar: false
   search:
     enabled: false
   icons:
@@ -74,27 +75,15 @@ module:
     - path: github.com/divinerites/plausible-hugo
   mounts:
     - source: ./node_modules/foundation-sites/dist/css/
-      target: ./static/foundation/
+      target: ./assets/css/
       includeFiles:
         - foundation.css
-        - foundation.min.css
-    - source: ./node_modules/foundation-sites/dist/js/
-      target: ./static/foundation/
-      includeFiles:
-        - foundation.js
-        - foundation.min.js
-    - source: ./node_modules/jquery/dist/
-      target: ./static/jquery/
-      includeFiles:
-        - jquery.js
-        - jquery.min.js
-    - source: ./node_modules/what-input/dist/
-      target: ./static/what-input/
-      includeFiles:
-        - what-input.js
-        - what-input.min.js
     - source: ./node_modules/@fontsource/fira-sans/
-      target: ./static/fira-sans/
+      target: ./assets/css/fira-sans/
+    - source: assets/css
+      target: assets/css
+    - source: assets/js
+      target: assets/js
     - source: static
       target: static
   hugoVersion:

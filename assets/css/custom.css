@@ -1,6 +1,3 @@
-@import "/foundation/foundation.min.css";
-@import "/css/colors.css";
-@import "/fira-sans/index.css";
 a {
   color: var(--link-color);
 }
