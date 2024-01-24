@@ -1,15 +1,23 @@
 {
-  "name": "eljoth-theme",
-  "version": "1.0.0",
-  "description": "## Features",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
-  "license": "MIT",
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@fontsource/fira-sans": "project",
+      "foundation-sites": "project"
+    }
+  },
+  "dependencies": {},
+  "description": "## Features",
   "devDependencies": {
     "@fontsource/fira-sans": "^5.0.18",
     "foundation-sites": "^6.8.1"
-  }
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "eljoth-theme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }

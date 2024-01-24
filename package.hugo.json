@@ -1,0 +1,15 @@
+{
+  "name": "eljoth-theme",
+  "version": "1.0.0",
+  "description": "## Features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@fontsource/fira-sans": "^5.0.18",
+    "foundation-sites": "^6.8.1"
+  }
+}
