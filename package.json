@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@fontsource/fira-sans": "^5.0.18",
     "foundation-sites": "^6.8.1"
   }
 }

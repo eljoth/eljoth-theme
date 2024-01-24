@@ -35,7 +35,7 @@ params:
   home:
     orbit:
       controls:
-        enabled: false
+        enabled: true
       elements:
         - image: waterfalls.png
           caption: Waterfalls located in spain.
@@ -68,11 +68,19 @@ params:
       - url: "/faq"
         text: FAQ
 module:
-    mounts:
-        - source: ./node_modules/foundation-sites/dist/css/foundation.min.css
-          target: ./static/foundation/foundation.min.css
-        - source: static
-          target: static
-    hugoVersion:
-        extended: false
-        min: 0.116.0
+  mounts:
+    - source: ./node_modules/foundation-sites/dist/css/
+      target: ./static/foundation/
+    - source: ./node_modules/foundation-sites/dist/js/
+      target: ./static/foundation/
+    - source: ./node_modules/jquery/dist/
+      target: ./static/jquery/
+    - source: ./node_modules/what-input/dist/
+      target: ./static/what-input/
+    - source: ./node_modules/@fontsource/fira-sans/
+      target: ./static/fira-sans/
+    - source: static
+      target: static
+  hugoVersion:
+    extended: false
+    min: 0.116.0
