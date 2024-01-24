@@ -69,8 +69,8 @@ params:
         text: FAQ
 module:
     mounts:
-        - source: ./node_modules/foundation-sites/dist/css
-          target: ./static/foundation
+        - source: ./node_modules/foundation-sites/dist/css/foundation.min.css
+          target: ./static/foundation/foundation.min.css
         - source: static
           target: static
     hugoVersion:
