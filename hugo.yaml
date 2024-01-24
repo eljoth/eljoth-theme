@@ -1,8 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
 title: My New Hugo Site
-theme:
-  - github.com/divinerites/plausible-hugo
 markup:
   highlight:
     style: nord
@@ -72,6 +70,8 @@ params:
       - url: "/faq"
         text: FAQ
 module:
+  imports:
+    - path: github.com/divinerites/plausible-hugo
   mounts:
     - source: ./node_modules/foundation-sites/dist/css/
       target: ./static/foundation/
