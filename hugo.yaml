@@ -1,0 +1,21 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: My New Hugo Site
+menus:
+    main:
+        - name: Home
+          pageRef: /
+          weight: 10
+        - name: Posts
+          pageRef: /posts
+          weight: 20
+        - name: Tags
+          pageRef: /tags
+          weight: 30
+module:
+    mounts:
+        - source: ./node_modules/foundation-sites/dist/css
+          target: static/css/foundation
+    hugoVersion:
+        extended: false
+        min: 0.116.0
