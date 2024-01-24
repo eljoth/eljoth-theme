@@ -1,0 +1,10 @@
+:root {
+    --primary: #283044;
+    --secondary: #B9D6F2;
+    --tertiary: #FFBA49;
+    --main-color: #222222;
+    --side-color: #f1f1f1;
+    --link-color: var(--secondary);
+    --link-color-hover: var(--tertiary);
+    --code-color: var(--side-color);
+}
