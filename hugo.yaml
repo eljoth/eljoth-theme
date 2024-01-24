@@ -74,10 +74,8 @@ module:
   imports:
     - path: github.com/divinerites/plausible-hugo
   mounts:
-    - source: ./node_modules/foundation-sites/dist/css/
-      target: ./assets/css/
-      includeFiles:
-        - foundation.css
+    - source: ./node_modules/foundation-sites/dist/css/foundation.css
+      target: ./assets/css/foundation.css
     - source: ./node_modules/@fontsource/fira-sans/
       target: ./assets/css/fira-sans/
     - source: assets/css
