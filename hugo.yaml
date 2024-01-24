@@ -30,6 +30,8 @@ menus:
       weight: 30
       pre: tag
 params:
+  plausible:
+    domain: ""
   search:
     enabled: false
   icons:
