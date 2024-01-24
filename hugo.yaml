@@ -86,6 +86,8 @@ module:
       target: assets/js
     - source: static
       target: static
+    - source: layouts
+      target: layouts
   hugoVersion:
     extended: false
     min: 0.116.0
