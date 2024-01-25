@@ -1,4 +1,6 @@
-<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+{{- $height := .height}}
+
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit >
     <div class="orbit-wrapper">
         <ul class="orbit-container">
             {{ if .controls.enabled }}
@@ -11,7 +13,7 @@
             {{ range .elements }}
                 <li class="orbit-slide">
                     <figure class="orbit-figure">
-                        <img class="orbit-image" src="{{ printf "/orbit/%s" .image }}" alt="Space">
+                        <img class="orbit-image" src="{{ printf "/orbit/%s" .image }}" alt="Space" style="height: {{ $height }}; object-fit: cover ">
                     </figure>
                     {{ with .caption }}
                         <figcaption class="orbit-caption">{{.}}</figcaption>
