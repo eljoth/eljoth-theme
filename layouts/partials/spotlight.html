@@ -1,12 +1,17 @@
 {{ $config := site.Params.Home.Spotlight }}
 {{ if .image }}
-    <div class="card spotlight" style="width: {{ $config.size }}; height: {{ $config.size }}">
+    <div class="card spotlight" style="width: {{ $config.size }};">
         {{ if .description}}
             {{- partial "partials/inline/spotlight/tooltip.html" . }}
         {{ else if .url }}
             {{- partial "partials/inline/spotlight/link.html" . }}
         {{ else }}
             {{- partial "partials/inline/spotlight/image.html" . }}
+        {{ end }}
+        {{ with .text }}
+            <div class="card-divider">
+                {{ . }}
+            </div>
         {{ end }}
     </div>
 {{ end }}
@@ -28,5 +33,6 @@
 {{ end }}
 
 {{ define "partials/inline/spotlight/image.html" }}
-    <img src="{{ printf "/spotlights/%s" .image}}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+    {{ $config := site.Params.Home.Spotlight }}
+    <img src="{{ printf "/spotlights/%s" .image}}" width="{{ $config.size }}" height="{{ $config.size }}" alt="">
 {{ end}}

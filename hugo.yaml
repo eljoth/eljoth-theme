@@ -50,6 +50,7 @@ params:
       elements:
         - url: "/"
           description: Hugo Theme for reuse in website development
+          text: Text
           image: eljoth.png
   footer:
     copyright:
