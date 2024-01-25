@@ -67,6 +67,9 @@ socialmedia .icon {
   .has-tip > & a {
     cursor: pointer
   }
+  .text{
+    background: var(--secondary)
+  }
 }
 
 .post:hover {
