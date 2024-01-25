@@ -1,4 +1,4 @@
-# Theme Name
+# eljoth Theme
 
 ## Features
 
