@@ -8,10 +8,10 @@ Create a hugo website as Hugo module and change into directory.
 
 ```bash
 hugo new site --format yaml <your-site-name>
-hugo mod init <your-module-name> 
+cd <your-site-name>
 # preferably the github repo with the path to the go.mod.
 # Like github.com/your-organization/your-repo <-- go.mod at root level
-cd <your-site-name>
+hugo mod init <your-module-name> 
 ```
 
 Add module to hugo config:
