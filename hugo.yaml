@@ -37,7 +37,7 @@ params:
     set: streamline/flex/line
   home:
     orbit:
-      height: 400px
+      # height: 400px
       controls:
         enabled: false
       elements:
