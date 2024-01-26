@@ -18,9 +18,6 @@ Add module to hugo config:
 
 ```yaml
 module:
-  mounts: # This is a TODO, in the future, this mount should be omitted
-    - source: ./node_modules/foundation-sites/dist/css/foundation.css
-      target: ./assets/css/foundation.css
   imports:
     - path: github.com/eljoth/eljoth-theme  
 ```
@@ -47,8 +44,8 @@ Add a mount to your colors.css file:
 module:
   mounts:
     # ...
-    - source: ./assets/css/colors.css
-      target: ./assets/css/colors.css
+    - source: ./static/css/colors.css
+      target: ./static/css/colors.css
 ```
 
 Add the colors.css file to [assets/css/colors.css](assets/css/colors.css)
