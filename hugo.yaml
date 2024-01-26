@@ -80,6 +80,8 @@ module:
       target: static/css/foundation.css
     - source: node_modules/@fontsource/fira-sans/
       target: static/fira-sans/
+    - source: assets
+      target: assets
     - source: static
       target: static
     - source: layouts
