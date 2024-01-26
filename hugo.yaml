@@ -77,9 +77,9 @@ module:
     - path: github.com/divinerites/plausible-hugo
   mounts:
     - source: node_modules/foundation-sites/dist/css/foundation.css
-      target: assets/css/foundation.css
+      target: static/css/foundation.css
     - source: node_modules/@fontsource/fira-sans/
-      target: assets/css/fira-sans/
+      target: static/fira-sans/
     - source: assets/css
       target: assets/css
     - source: assets/js

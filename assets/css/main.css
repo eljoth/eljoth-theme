@@ -1,0 +1,110 @@
+@import "/fira-sans/index.css";
+@import "/css/foundation.css";
+@import "/css/colors.css";
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-color-hover)
+}
+
+body {
+    font-family: "Fira Sans", serif;
+    color: var(--main-color);
+    background: var(--side-color);
+}
+
+content {
+    min-height: calc(100vh - 55px);
+}
+
+main {
+    min-height: min-content !important;
+}
+
+footer {
+    margin-top: auto;
+    background: var(--primary);
+    color: var(--side-color);
+    padding: 10px 20px;
+}
+
+copyright {
+    text-align: center;
+}
+
+contact {
+    text-align: right;
+}
+
+.top-bar, .top-bar ul {
+    color: var(--side-color);
+    background-color: var(--primary);
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+}
+
+socialmedia .icon {
+    width: 25px;
+}
+
+.post {
+    width: 300px;
+    height: 450px;
+
+    & a {
+        color: var(--main-color);
+    }
+
+    .summary {
+        height: 70%;
+        overflow: hidden;
+    }
+}
+
+.spotlight {
+    & img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .has-tip {
+        > & a {
+            cursor: pointer;
+        }
+
+        border: none;
+    }
+
+    .text {
+        background: var(--secondary)
+    }
+}
+
+.post:hover {
+    background-color: var(--secondary);
+}
+
+.list {
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 20px 0px;
+}
+
+code {
+    font-family: "Fira Code", monospace;
+    color: var(--code-color);
+}
+
+.label {
+    background: var(--tertiary);
+}
+
+.label:hover {
+    cursor: pointer;
+}

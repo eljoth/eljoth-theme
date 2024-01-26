@@ -1,6 +1,6 @@
 {{ $config := site.Params.Home.Spotlight }}
 {{ if .image }}
-    <div class="card spotlight" style="width: {{ $config.size }};">
+    <div class="card spotlight">
         {{ if .description}}
             {{- partial "partials/inline/spotlight/tooltip.html" . }}
         {{ else if .url }}

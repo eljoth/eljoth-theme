@@ -1,7 +1,3 @@
-{{ $a := resources.Get "css/foundation.css" }}
-{{ $b := resources.Get "css/custom.css" }}
-{{ $c := resources.Get "css/colors.css" }}
-
-{{ $css := slice $a $b $c| resources.Concat "css/main.css" | minify | fingerprint }}
-
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></link>
+{{ with resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></link>
+{{ end}}
